@@ -1,0 +1,28 @@
+{
+  "version": "2.1.0",
+  "buildDate": "2025-08-05T06:45:17.010Z",
+  "platform": "Windows x64",
+  "nodeVersion": "18.x",
+  "fileSize": 50795036,
+  "features": [
+    "独立exe文件",
+    "Web界面展示",
+    "API接口",
+    "模拟数据",
+    "实时更新"
+  ],
+  "limitations": [
+    "演示版本",
+    "不包含网络抓包功能",
+    "需要Windows环境重新编译cap模块"
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "INSTALL.md",
+    "LICENSE",
+    "README.md",
+    "README.txt",
+    "release-info.json",
+    "star-resonance-counter.exe"
+  ]
+}
