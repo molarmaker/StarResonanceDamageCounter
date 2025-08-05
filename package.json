@@ -2,19 +2,33 @@
   "name": "star-resonance-damage-counter",
   "version": "2.1.0",
   "description": "Damage Counter for Star Resonance",
-  "main": "server.js",
+  "main": "server-demo.js",
+  "bin": "server-demo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg .",
+    "build:win": "pkg . --targets node18-win-x64 --output dist/star-resonance-counter.exe",
+    "build:all": "pkg . --targets node18-win-x64,node18-linux-x64,node18-macos-x64 --output dist/star-resonance-counter"
   },
   "keywords": [],
   "author": "Dimole <dmlgzs@qq.com>",
   "license": "MPL-2.0",
   "packageManager": "pnpm@10.13.1",
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "algo/**/*"
+    ],
+    "targets": ["node18-win-x64"],
+    "outputPath": "dist"
+  },
   "dependencies": {
-    "cap": "^0.2.1",
     "express": "^5.1.0",
     "protobufjs": "^7.5.3",
     "socket.io": "^4.8.1",
     "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
   }
 }
